@@ -1,14 +1,8 @@
-lucide.createIcon("settings", {
-    viewBox: "0 0 24 24",
-    paths: []
-})
-
-const sections =
-document.querySelectorAll('section');
-const navlinks =
-document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
+const navlinks = document.querySelectorAll('.navlink');
 window.addEventListener('scroll', () => {
     let currentId = '';
+
     sections.forEach(section => {
         const sectionPos = section.offsetTop - 90;
         if (window.scrollY >= sectionPos) {
@@ -17,9 +11,11 @@ window.addEventListener('scroll', () => {
     });
     navlinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === '#${currentid}') {
-        link.classList.add('active');
+        if (link.getAttribute('href') === '#' + currentId) {
+
         }
     });
 });
+    
+
     
